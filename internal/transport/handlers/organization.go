@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"gitlab.com/greatsoft/xif-backend/internal/core/domain"
-	"gitlab.com/greatsoft/xif-backend/pkg/processor"
+	"gitlab.com/voxe-analytics/internal/core/domain"
+	"gitlab.com/voxe-analytics/pkg/processor"
 )
 
 // @Summary Get all organizations

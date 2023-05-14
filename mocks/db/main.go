@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/jaswdr/faker"
-	"gitlab.com/greatsoft/xif-backend/internal/config"
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository"
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository/psql/sqlc"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/factory"
+	"gitlab.com/voxe-analytics/internal/config"
+	"gitlab.com/voxe-analytics/internal/core/repository"
+	"gitlab.com/voxe-analytics/internal/core/repository/psql/sqlc"
+	"gitlab.com/voxe-analytics/internal/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/logger/factory"
 	"gopkg.in/guregu/null.v4/zero"
 )
 

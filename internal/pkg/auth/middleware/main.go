@@ -6,11 +6,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository/psql/sqlc"
+	"gitlab.com/voxe-analytics/internal/core/repository/psql/sqlc"
 
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/response"
-	"gitlab.com/greatsoft/xif-backend/pkg/jwt"
+	"gitlab.com/voxe-analytics/internal/pkg/logger"
+	"gitlab.com/voxe-analytics/internal/pkg/response"
+	"gitlab.com/voxe-analytics/pkg/jwt"
 )
 
 type Authorizer interface {

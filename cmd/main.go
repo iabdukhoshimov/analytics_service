@@ -8,10 +8,10 @@ import (
 	"os/signal"
 	"sync"
 
-	"gitlab.com/greatsoft/xif-backend/internal/config"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/internal/transport/handlers"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/factory"
+	"gitlab.com/voxe-analytics/internal/config"
+	"gitlab.com/voxe-analytics/internal/pkg/logger"
+	"gitlab.com/voxe-analytics/internal/transport/handlers"
+	"gitlab.com/voxe-analytics/pkg/logger/factory"
 
 	autometrics "github.com/autometrics-dev/autometrics-go/pkg/autometrics/otel"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

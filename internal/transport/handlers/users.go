@@ -7,9 +7,9 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"gitlab.com/greatsoft/xif-backend/internal/core/domain"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/response"
-	"gitlab.com/greatsoft/xif-backend/pkg/processor"
+	"gitlab.com/voxe-analytics/internal/core/domain"
+	"gitlab.com/voxe-analytics/internal/pkg/response"
+	"gitlab.com/voxe-analytics/pkg/processor"
 )
 
 // @Summary Create user

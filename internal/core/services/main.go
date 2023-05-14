@@ -1,6 +1,6 @@
 package services
 
-import "gitlab.com/greatsoft/xif-backend/internal/core/repository"
+import "gitlab.com/voxe-analytics/internal/core/repository"
 
 type Service struct {
 }

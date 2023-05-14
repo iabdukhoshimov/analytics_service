@@ -7,7 +7,7 @@ import (
 
 	env "github.com/Netflix/go-env"
 	"github.com/joho/godotenv"
-	logConfig "gitlab.com/greatsoft/xif-backend/pkg/logger/config"
+	logConfig "gitlab.com/voxe-analytics/pkg/logger/config"
 
 	"gopkg.in/yaml.v3"
 )

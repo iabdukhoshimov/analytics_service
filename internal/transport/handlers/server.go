@@ -9,13 +9,13 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	"gitlab.com/greatsoft/xif-backend/api/openapi"
-	"gitlab.com/greatsoft/xif-backend/internal/config"
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository"
-	"gitlab.com/greatsoft/xif-backend/internal/core/services"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/auth/middleware"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/jwt"
+	"gitlab.com/voxe-analytics/api/openapi"
+	"gitlab.com/voxe-analytics/internal/config"
+	"gitlab.com/voxe-analytics/internal/core/repository"
+	"gitlab.com/voxe-analytics/internal/core/services"
+	"gitlab.com/voxe-analytics/internal/pkg/auth/middleware"
+	"gitlab.com/voxe-analytics/internal/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/jwt"
 )
 
 type Server interface {

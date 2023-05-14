@@ -1,6 +1,6 @@
 package mocks
 
-import "gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
+import "gitlab.com/voxe-analytics/internal/pkg/logger"
 
 type mockLogger struct {
 }

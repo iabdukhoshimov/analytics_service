@@ -1,7 +1,7 @@
 // Package logger represents a generic logging interface
 package logger
 
-import "gitlab.com/greatsoft/xif-backend/pkg/logger"
+import "gitlab.com/voxe-analytics/pkg/logger"
 
 // Log is a package level variable, every program should access logging function through "Log"
 var Log logger.Logger

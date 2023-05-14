@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
+	"gitlab.com/voxe-analytics/internal/pkg/logger"
 )
 
 type ExecutorWithResp[K any, Z any] func(ctx context.Context, input K) (Z, error)

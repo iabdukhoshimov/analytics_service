@@ -1,6 +1,6 @@
 package domain
 
-import "gitlab.com/greatsoft/xif-backend/internal/core/repository/psql/sqlc"
+import "gitlab.com/voxe-analytics/internal/core/repository/psql/sqlc"
 
 type LicenseFilter struct {
 	Limit       int32  `form:"limit" json:"limit" default:"10"`

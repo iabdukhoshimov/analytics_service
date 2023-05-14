@@ -1,6 +1,6 @@
 package domain
 
-import "gitlab.com/greatsoft/xif-backend/internal/core/repository/psql/sqlc"
+import "gitlab.com/voxe-analytics/internal/core/repository/psql/sqlc"
 
 type PaymentGetAll struct {
 	Objects []sqlc.Payment `json:"objects"`

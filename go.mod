@@ -1,4 +1,4 @@
-module gitlab.com/greatsoft/xif-backend
+module gitlab.com/voxe-analytics
 
 go 1.20
 

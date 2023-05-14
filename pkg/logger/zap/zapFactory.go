@@ -1,8 +1,8 @@
 package zap
 
 import (
-	"gitlab.com/greatsoft/xif-backend/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/config"
+	"gitlab.com/voxe-analytics/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/logger/config"
 )
 
 // Factory is the receiver for zap factory

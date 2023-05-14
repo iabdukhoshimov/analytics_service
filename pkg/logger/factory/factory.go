@@ -3,10 +3,10 @@ package factory
 import (
 	"fmt"
 
-	"gitlab.com/greatsoft/xif-backend/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/config"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/logrus"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/zap"
+	"gitlab.com/voxe-analytics/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/logger/config"
+	"gitlab.com/voxe-analytics/pkg/logger/logrus"
+	"gitlab.com/voxe-analytics/pkg/logger/zap"
 )
 
 // logger map to map logger code to logger builder

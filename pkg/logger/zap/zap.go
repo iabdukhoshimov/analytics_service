@@ -4,8 +4,8 @@ package zap
 import (
 	"time"
 
-	"gitlab.com/greatsoft/xif-backend/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/config"
+	"gitlab.com/voxe-analytics/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/logger/config"
 	"go.uber.org/zap"
 
 	"go.uber.org/zap/zapcore"

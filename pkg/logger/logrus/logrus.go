@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/sirupsen/logrus"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/config"
+	"gitlab.com/voxe-analytics/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/logger/config"
 )
 
 // logWrapper allows to add or override logger methods

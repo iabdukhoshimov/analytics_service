@@ -5,8 +5,8 @@ import (
 
 	"github.com/jackc/pgx/v4/pgxpool"
 
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository/psql/sqlc"
-	"gitlab.com/greatsoft/xif-backend/internal/pkg/logger"
+	"gitlab.com/voxe-analytics/internal/core/repository/psql/sqlc"
+	"gitlab.com/voxe-analytics/internal/pkg/logger"
 )
 
 type SQLStore struct {

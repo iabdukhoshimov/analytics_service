@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab.com/greatsoft/xif-backend/pkg/logger"
-	"gitlab.com/greatsoft/xif-backend/pkg/logger/config"
+	"gitlab.com/voxe-analytics/pkg/logger"
+	"gitlab.com/voxe-analytics/pkg/logger/config"
 )
 
 const DateTimeFormat = "2006-01-02 15:04:05"

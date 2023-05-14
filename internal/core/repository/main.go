@@ -3,9 +3,9 @@ package repository
 import (
 	"context"
 
-	"gitlab.com/greatsoft/xif-backend/internal/config"
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository/psql"
-	"gitlab.com/greatsoft/xif-backend/internal/core/repository/psql/sqlc"
+	"gitlab.com/voxe-analytics/internal/config"
+	"gitlab.com/voxe-analytics/internal/core/repository/psql"
+	"gitlab.com/voxe-analytics/internal/core/repository/psql/sqlc"
 )
 
 type Store interface {
