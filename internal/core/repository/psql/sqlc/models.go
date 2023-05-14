@@ -10,188 +10,59 @@ import (
 	"gopkg.in/guregu/null.v4/zero"
 )
 
-type Classificator struct {
-	ID        string      `json:"id"`
-	Group     int32       `json:"group"`
-	Question  string      `json:"question"`
-	Answer    zero.String `json:"answer"`
-	CreatedAt zero.Time   `json:"created_at"`
-	UpdatedAt zero.Time   `json:"updated_at"`
-	DeletedAt zero.Time   `json:"deleted_at"`
+type MovieDuration struct {
+	ID            string      `json:"id"`
+	MovieSlug     string      `json:"movie_slug"`
+	OwnerID       string      `json:"owner_id"`
+	SeasonNumber  zero.Int    `json:"season_number"`
+	EpisodeNumber zero.Int    `json:"episode_number"`
+	StartAt       zero.Int    `json:"start_at"`
+	EndAt         zero.Int    `json:"end_at"`
+	AudioLang     zero.String `json:"audio_lang"`
+	SubtitleLang  zero.String `json:"subtitle_lang"`
+	IpAddress     zero.String `json:"ip_address"`
+	UserID        zero.String `json:"user_id"`
+	Platform      zero.String `json:"platform"`
+	CreatedAt     time.Time   `json:"created_at"`
+	Category      string      `json:"category"`
 }
 
-type ClassificatorGroup struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
+type MovieImpression struct {
+	ID          string      `json:"id"`
+	MovieSlug   string      `json:"movie_slug"`
+	OwnerID     string      `json:"owner_id"`
+	UserID      zero.String `json:"user_id"`
+	IpAddress   zero.String `json:"ip_address"`
+	SourcePlace string      `json:"source_place"`
+	Country     zero.String `json:"country"`
+	Region      zero.String `json:"region"`
+	Platform    zero.String `json:"platform"`
+	City        zero.String `json:"city"`
+	Lon         zero.Float  `json:"lon"`
+	Lat         zero.Float  `json:"lat"`
+	CreatedAt   time.Time   `json:"created_at"`
+	Category    string      `json:"category"`
 }
 
-type Declaration struct {
-	ID                       string      `json:"id"`
-	OrganizationID           string      `json:"organization_id"`
-	DangerRate               int32       `json:"danger_rate"`
-	ReasonsOfDanger          zero.String `json:"reasons_of_danger"`
-	ConverageOfTheDangerArea zero.String `json:"converage_of_the_danger_area"`
-	Proof                    string      `json:"proof"`
-	LocationInfo             zero.String `json:"location_info"`
-	ResidentsInfo            zero.String `json:"residents_info"`
-	LifeInsurance            zero.String `json:"life_insurance"`
-	TechDocument             zero.String `json:"tech_document"`
-	Status                   int32       `json:"status"`
-	CreatedAt                zero.Time   `json:"created_at"`
-	UpdatedAt                zero.Time   `json:"updated_at"`
-	DeletedAt                zero.Time   `json:"deleted_at"`
-}
-
-type DynamicCategory struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
-}
-
-type DynamicForm struct {
-	ID       string `json:"id"`
-	Name     string `json:"name"`
-	Category int32  `json:"category"`
-}
-
-type DynamicFormKeyValue struct {
-	ID   string `json:"id"`
-	Key  string `json:"key"`
-	Type string `json:"type"`
-}
-
-type DynamicFormValue struct {
-	ID     string `json:"id"`
-	KeyID  string `json:"key_id"`
-	FormID string `json:"form_id"`
-	Value  string `json:"value"`
-}
-
-type Fine struct {
-	ID            string    `json:"id"`
-	IssuedAt      time.Time `json:"issued_at"`
-	IssuedBy      string    `json:"issued_by"`
-	IssuedTo      string    `json:"issued_to"`
-	Status        int32     `json:"status"`
-	Amount        int64     `json:"amount"`
-	Reason        string    `json:"reason"`
-	InvoiceNumber string    `json:"invoice_number"`
-	CreatedAt     zero.Time `json:"created_at"`
-	UpdatedAt     zero.Time `json:"updated_at"`
-	DeletedAt     zero.Time `json:"deleted_at"`
-}
-
-type License struct {
-	ID               string      `json:"id"`
-	DocumentNumber   zero.String `json:"document_number"`
-	GrantedDate      zero.Time   `json:"granted_date"`
-	Lifetime         zero.Int    `json:"lifetime"`
-	OrganizationName string      `json:"organization_name"`
-	StirNumber       zero.String `json:"stir_number"`
-	ReestrNumber     zero.String `json:"reestr_number"`
-	WorkCategory     zero.String `json:"work_category"`
-	DocFile          zero.String `json:"doc_file"`
-	LicenseType      int32       `json:"license_type"`
-	CreatedAt        zero.Time   `json:"created_at"`
-	UpdatedAt        zero.Time   `json:"updated_at"`
-	DeletedAt        zero.Time   `json:"deleted_at"`
-}
-
-type LicenseType struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
-}
-
-type Organization struct {
-	ID                 string      `json:"id"`
-	Name               string      `json:"name"`
-	FullName           string      `json:"full_name"`
-	PhoneNumber        string      `json:"phone_number"`
-	ParentOrganization zero.String `json:"parent_organization"`
-	Location           zero.String `json:"location"`
-	CreatedAt          zero.Time   `json:"created_at"`
-	UpdatedAt          zero.Time   `json:"updated_at"`
-	DeletedAt          zero.Time   `json:"deleted_at"`
-}
-
-type Path struct {
-	ID   int32  `json:"id"`
-	Path string `json:"path"`
-}
-
-type Payment struct {
-	ID             string      `json:"id"`
-	OrganizationID string      `json:"organization_id"`
-	Amount         int64       `json:"amount"`
-	Requisites     zero.String `json:"requisites"`
-	Status         int32       `json:"status"`
-	Type           int32       `json:"type"`
-	CreatedAt      zero.Time   `json:"created_at"`
-	UpdatedAt      zero.Time   `json:"updated_at"`
-	DeletedAt      zero.Time   `json:"deleted_at"`
-}
-
-type PaymentType struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
-}
-
-type Permission struct {
-	ID        int32 `json:"id"`
-	RoleID    int32 `json:"role_id"`
-	PathID    int32 `json:"path_id"`
-	CanInsert bool  `json:"can_insert"`
-	CanUpdate bool  `json:"can_update"`
-	CanDelete bool  `json:"can_delete"`
-	CanRead   bool  `json:"can_read"`
-}
-
-type Region struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
-}
-
-type Role struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
-}
-
-type Session struct {
-	ID         string      `json:"id"`
-	DeviceName string      `json:"device_name"`
-	IpAddress  zero.String `json:"ip_address"`
-	CreatedAt  zero.Time   `json:"created_at"`
-	UpdatedAt  zero.Time   `json:"updated_at"`
-	DeletedAt  zero.Time   `json:"deleted_at"`
-}
-
-type Status struct {
-	ID   int32  `json:"id"`
-	Name string `json:"name"`
-}
-
-type User struct {
-	ID             string      `json:"id"`
-	FirstName      string      `json:"first_name"`
-	LastName       string      `json:"last_name"`
-	SecondName     string      `json:"second_name"`
-	ProfilePicture zero.String `json:"profile_picture"`
-	Inn            zero.String `json:"inn"`
-	Email          string      `json:"email"`
-	PhoneNumber    string      `json:"phone_number"`
-	RoleID         int32       `json:"role_id"`
-	HashedPassword string      `json:"hashed_password"`
-	Status         int32       `json:"status"`
-	RegionID       int32       `json:"region_id"`
-	CreatedAt      zero.Time   `json:"created_at"`
-	UpdatedAt      zero.Time   `json:"updated_at"`
-	DeletedAt      zero.Time   `json:"deleted_at"`
-}
-
-type UserSession struct {
-	ID        string    `json:"id"`
-	UserID    string    `json:"user_id"`
-	SessionID string    `json:"session_id"`
-	CreatedAt zero.Time `json:"created_at"`
-	UpdatedAt zero.Time `json:"updated_at"`
-	DeletedAt zero.Time `json:"deleted_at"`
+type MovieView struct {
+	ID            string      `json:"id"`
+	IpAddress     string      `json:"ip_address"`
+	UserID        zero.String `json:"user_id"`
+	MovieSlug     string      `json:"movie_slug"`
+	OwnerID       string      `json:"owner_id"`
+	SeasonNumber  zero.Int    `json:"season_number"`
+	EpisodeNumber zero.Int    `json:"episode_number"`
+	ViewedAt      time.Time   `json:"viewed_at"`
+	CreatedAt     time.Time   `json:"created_at"`
+	Active        bool        `json:"active"`
+	SourcePlace   string      `json:"source_place"`
+	AudioLang     zero.String `json:"audio_lang"`
+	SubtitleLang  zero.String `json:"subtitle_lang"`
+	Country       zero.String `json:"country"`
+	Region        zero.String `json:"region"`
+	Platform      zero.String `json:"platform"`
+	City          zero.String `json:"city"`
+	Lon           zero.Float  `json:"lon"`
+	Lat           zero.Float  `json:"lat"`
+	Category      string      `json:"category"`
 }

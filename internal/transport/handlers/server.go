@@ -13,7 +13,6 @@ import (
 	"gitlab.com/voxe-analytics/internal/config"
 	"gitlab.com/voxe-analytics/internal/core/repository"
 	"gitlab.com/voxe-analytics/internal/core/services"
-	"gitlab.com/voxe-analytics/internal/pkg/auth/middleware"
 	"gitlab.com/voxe-analytics/internal/pkg/logger"
 	"gitlab.com/voxe-analytics/pkg/jwt"
 )
@@ -28,8 +27,8 @@ type handler struct {
 	services *services.Service
 	config   *config.Config
 
-	auth *middleware.CustomAuthorizer
-	jwt  jwt.Authenticator
+	// auth *middleware.CustomAuthorizer
+	jwt jwt.Authenticator
 
 	repo repository.Store
 }
@@ -107,5 +106,5 @@ func (h *handler) setUpAuth() {
 	}
 
 	h.jwt = jwt.New(tokenTypes)
-	h.auth = middleware.New(h.jwt, h.repo)
+	// h.auth = middleware.New(h.jwt, h.repo)
 }
