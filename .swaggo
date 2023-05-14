@@ -1,0 +1,2 @@
+replace zero.String string
+replace zero.Int int

@@ -1,0 +1,24 @@
+project:
+  name: &projectName Backend Prod
+  gracefulTimeoutSeconds: 5
+  version: 1.0.0
+  swaggerEnabled: false
+  fileUploadMaxMegabytes: 30
+  timeout: "7s"
+logging:
+  projectName: *projectName
+  code: zap
+  encoding: json
+  level: error
+  dateTimeFormat: 2006-01-02 15:04:05
+  dateFormat: 2006-01-02
+  enableCaller: true
+  devMode: false
+http:
+  host: localhost
+  port: 8080
+jwt:
+  accessTokenTTLMinutes: 30m
+  refreshTokenTTLHours: 24h
+storage:
+  bucketName: aggregator
